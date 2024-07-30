@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root {
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.advice-container {
+    background-color: var(--dark-grayish-blue);
+    border-radius: 15px;
+    padding: 40px 24px 72px;
+    max-width: 540px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    box-shadow: 30px 50px 80px rgba(0, 0, 0, 0.100202);
+}
+
+.advice-number {
+    color: var(--neon-green);
+    font-size: 11px;
+    letter-spacing: 3.46px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.advice-text {
+    color: var(--light-cyan);
+    font-size: 24px;
+    letter-spacing: -0.26px;
+    margin-bottom: 24px;
+}
+
+.divider {
+    background-image: url('images/pattern-divider-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    height: 16px;
+    margin-bottom: 16px;
+}
+
+.dice-button {
+    background-color: var(--neon-green);
+    border: none;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    bottom: -32px;
+    transform: translateX(-50%);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.dice-button:hover {
+    box-shadow: 0 0 40px var(--neon-green);
+}
+
+@media (min-width: 768px) {
+    .advice-container {
+        padding: 48px 48px 72px;
+    }
+
+    .advice-number {
+        font-size: 13px;
+        letter-spacing: 4.09px;
+    }
+
+    .advice-text {
+        font-size: 28px;
+        letter-spacing: -0.3px;
+    }
+
+    .divider {
+        background-image: url('images/pattern-divider-desktop.svg');
+        margin-bottom: 24px;
+    }
+}
